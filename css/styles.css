@@ -17,24 +17,30 @@ html, body, div, span, header, ul, li, section, article, h1, h2, h3, h6 {margin:
 nav.mainmenu{
   background-color: #141414;
   opacity: 0.9;
-  padding: 20px 30px;
+  padding: 14px 30px;
+  line-height: 30px;
+  height: 70px;
   filter: alpha(opacity=90); /* For IE8 and earlier */
   overflow: hidden;
 }
+nav.mainmenu i{margin-left: 5px;}
 nav ul{margin: 0;}
 nav ul li:last-child{margin: 0;}
-
-nav.submenu{background-color: #fdfdfd;
-  padding: 15px 30px;
+.logo{margin-top: 5px;}
+nav.submenu{
+  background-color: #fdfdfd;
+  padding: 11px 30px;
   opacity: 0.8;
+  height: 50px;
+  line-height: 26px;
   filter: alpha(opacity=80); /* For IE8 and earlier */
   overflow: hidden;
 }
-nav li{display: inline-block; margin: 5px 10px;}
+nav li{display: inline-block; margin: 5px 10px; vertical-align: middle;}
 nav li a{color: #fdfdfd; text-transform: uppercase;   font-size: 13px;}
 nav li a:hover{text-decoration: none;}
 
-nav.submenu li{display: inline-block; margin: 0 10px;}
+nav.submenu li{display: inline-block; margin: 0 10px; vertical-align: middle;}
 nav.submenu li a{color: #929292; text-transform: uppercase;   font-size: 12px;}
 nav li a:hover, nav li a.active{text-decoration: underline; color: #424242;}
 
@@ -76,6 +82,7 @@ blockquote {
 }
 blockquote footer{
   color: #0096d6;
+  margin-top: 20px;
 }
 
 .blockquote-txt{width: 88%}
@@ -97,10 +104,91 @@ blockquote footer{
 .inner-join-ifit{width: 60%;    margin: 0 auto;}
 .inner-join-ifit p{padding: 0 20px; font-size: 34px;}
 
-.footer{background-color: #151515; color: #747475; font-size: 10px;overflow: hidden;  padding: 18px;}
+.footer{background-color: #151515; color: #747475; font-size: 10px;overflow: hidden;  padding: 18px; height: 50px;}
 .footer a{ color: #747475; padding: 0 5px; font-size: 10px;}
 .footer li{list-style: none; display: inline-block; margin: 0;}
 
 .social{ margin-left: 70px;}
 .social li{ padding: 0 10px;}
 .copyright li:first-child{ margin-right: 10px;}
+
+
+/* Search animation*/
+
+.search {
+    padding: 5px 0;
+    height: 30px;
+    position: relative;
+    left: 10px;
+    float: left;
+    line-height: 22px;
+}
+
+.search input {
+    position: absolute;
+    width: 20px;
+    float: Left;
+    margin-left: 210px;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    transition: all 0.7s ease-in-out;
+    height: 30px;
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+    border-radius:1px;
+    bottom: 0px;
+}
+
+.search:hover {
+    width: 230px;
+}
+
+.search:hover input, .search input:focus {
+    width: 200px;
+    margin-left: 35px;
+}
+
+.glyphicon-search {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 7px;
+}
+
+/* Image overlay*/
+
+.img-block {
+  position: relative;
+}
+
+.img-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #141414;
+  opacity: 0.6;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.img-block:hover .overlay {
+  height: 100%;
+}
+.img-block .text{
+  color: #fff;
+  font-size: 16px;
+  padding: 10px;
+}
+.hide-card{
+  opacity: 0;
+}
